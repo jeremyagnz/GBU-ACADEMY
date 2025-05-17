@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" sizes="120x120" href="assets/icon.jpg" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>GBU Academy</title>
+</head>
+
+<body>
+    <header>
+        <a href="https://example.com">
+            <img src="assets/icon_bg_removed.png.png" alt="Descripción de la imagen" class="img-icon" />
+        </a>
+        <input type="checkbox" id="menu-toggle" />
+        <label class="menu-icon" for="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article class="head">
+            <img src="assets/IMG 1.jpg" alt="" srcset="">
+        </article>
+        <section>
+            <h2>Perfecciona tu inglés en donde quiera estés.</h2>
+            <button> Empieza ya</button>
+        </section>
+    </main>
+
+
+
+    <section class="info-container">
+        <div class="info">
+            <h2> Your GBU Experience</h2>
+        </div>
+
+       <div>
+         <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="assets/car1.jpg" style="width:100%">
+                <!-- <div class="text">Caption Text</div> -->
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="assets/car2.jpg" style="width:100%">
+              <!--   <div class="text">Caption Two</div> -->
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="assets/car3.jpg" style="width:100%">
+                <!-- <div class="text">Caption Three</div> -->
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+       </div>
+
+    </section>
+
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>
