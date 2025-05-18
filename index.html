@@ -11,20 +11,25 @@
 
 <body>
     <header>
-        <a href="https://example.com">
-            <img src="assets/icon_bg_removed.png.png" alt="Descripción de la imagen" class="img-icon" />
-        </a>
-        <input type="checkbox" id="menu-toggle" />
-        <label class="menu-icon" for="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Servicios</a>
-            <a href="#">Contacto</a>
-        </nav>
+        <img src="assets/icon_bg_removed.png.png" alt="Descripción de la imagen" class="img-icon" />
+
+
+        <div class="container-nav">
+            <input type="checkbox" id="menu-toggle" />
+            <label class="menu-icon" for="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav>
+                <a href="#">Inicio</a>
+                <a href="#">Servicios</a>
+                <a href="#">Contacto</a>
+            </nav>
+            <label for="menu-toggle" class="overlay"></label>
+
+        </div>
+
     </header>
 
     <main class="container">
@@ -44,39 +49,39 @@
             <h2> Your GBU Experience</h2>
         </div>
 
-       <div>
-         <div class="slideshow-container">
+        <div>
+            <div class="slideshow-container">
 
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
-                <img src="assets/car1.jpg" style="width:100%">
-                <!-- <div class="text">Caption Text</div> -->
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="assets/car1.jpg" style="width:100%">
+                    <!-- <div class="text">Caption Text</div> -->
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="assets/car2.jpg" style="width:100%">
+                    <!--   <div class="text">Caption Two</div> -->
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="assets/car3.jpg" style="width:100%">
+                    <!-- <div class="text">Caption Three</div> -->
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
             </div>
+            <br>
 
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 3</div>
-                <img src="assets/car2.jpg" style="width:100%">
-              <!--   <div class="text">Caption Two</div> -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
-                <img src="assets/car3.jpg" style="width:100%">
-                <!-- <div class="text">Caption Three</div> -->
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-
         </div>
-        <br>
-
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-       </div>
 
     </section>
 
